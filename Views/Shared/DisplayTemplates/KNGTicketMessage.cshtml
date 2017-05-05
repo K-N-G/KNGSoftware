@@ -1,0 +1,33 @@
+﻿@model KNGSoftware.Models.ViewModels.MyKNG.KNGTicketMessageVm
+@if (@Model.MessageUser.User.UserName != User.Identity.Name)
+{
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h2>Admin</h2>
+        </div>
+        <div class="panel-body">
+            <p>@Model.Message</p>
+            <p>@Model.DateTimeMessage</p>
+        </div>
+    </div>
+}
+else
+{
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h2>@Model.MessageUser.User.LastName</h2>
+        </div>
+        <div class="panel-body">
+            <p>@Model.Message</p>
+            <p>@Model.DateTimeMessage</p>
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+﻿@model KNGSoftware.Models.ViewModels.Newses.KNGDetailsNewsVm
+@{
+    ViewBag.Title = "Details News";
+}
+
+<h2>@Html.DisplayFor(news => Model.Name)</h2>
+<p>@Html.DisplayFor(news => Model.Description)</p>
+<div>@Html.DisplayFor(news => Model.PublishDateTime)</div>
+@Html.ActionLink("Back","Index","Home", null, new {@class = "btn btn-lg btn-primary"})

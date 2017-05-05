@@ -1,0 +1,9 @@
+﻿@model KNGSoftware.Models.ViewModels.MyKNG.KNGTicketVm
+@{
+    ViewBag.Title = "Messages";
+}
+<h2>@Model.LabelTicket</h2>
+<a href="/MyKNG/addmessage/@Model.Id" class="btn btn-btn btn-info">Add message</a>
+<p>@Model.DateTimeTicket</p>
+@Html.DisplayFor(m =>m.Messages)
+

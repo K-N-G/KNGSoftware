@@ -1,0 +1,26 @@
+﻿@model KNGSoftware.Models.ViewModels.Services.KNGServiceVm
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>@Model.Name</h2>
+    </div>
+    <div class="panel-body">
+        <img src="@Model.Image" alt="Image" class="img-thumbnail" width="304" />
+    </div>
+    @if (User.IsInRole("KNGAdmin"))
+    {
+        <div class="btn-group-kng">
+            <a href="/admin/service/details/@Model.Id" class="btn btn-primary">Details</a>
+            <a href="/admin/service/edit/@Model.Id" class="btn btn-primary">Edit</a>
+            <a href="/admin/service/delete/@Model.Id" class="btn btn-danger">Delete</a>
+        </div>
+
+    }
+    else
+    {
+        <div class="btn-group-kng">
+            <a href="/services/details/@Model.Id" class="btn btn-primary">Details</a>
+            <a href="/services/get/@Model.Id" class="btn btn-primary">Get</a>
+        </div>
+    }
+</div>
+

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<KNGSoftware.Models.ViewModels.Products.KNGProductVm>
+@{
+    ViewBag.Title = "Admin Product";
+}
+<ul class="nav nav-tabs">
+    <li role="presentation"><a href="/admin/news">News</a></li>
+    <li role="presentation"><a href="/admin/service">Service</a></li>
+    <li role="presentation" class="active"><a href="/admin/product">Product</a></li>
+</ul>
+
+@Html.ActionLink("Add product", "add", "Product", new { Area = "Admin" }, new { @class = "btn btn-info" })
+<h2>Admin Products</h2>
+
+@Html.DisplayForModel(Model)

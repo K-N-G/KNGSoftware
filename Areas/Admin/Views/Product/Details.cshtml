@@ -1,0 +1,14 @@
+﻿@model KNGSoftware.Models.ViewModels.Products.KNGDetailsProductVm
+@{
+    ViewBag.Title = "Details product";
+}
+<ul class="nav nav-tabs">
+    <li role="presentation"><a href="/admin/news">News</a></li>
+    <li role="presentation"><a href="/admin/service">Service</a></li>
+    <li role="presentation" class="active"><a href="/admin/product">Product</a></li>
+</ul>
+
+<h2>@Html.DisplayFor(news => Model.Name)</h2>
+<p>@Html.DisplayFor(news => Model.Description)</p>
+<div>@Html.DisplayFor(news => Model.Price)</div>
+@Html.ActionLink("Back", "All", "Product", new { Area = "Admin" }, new { @class = "btn btn-lg btn-primary" })

@@ -1,0 +1,27 @@
+﻿@model KNGSoftware.Models.ViewModels.Services.KNGServiceVm
+
+@{
+    ViewBag.Title = "Get service to MyKNG";
+}
+
+<h2>Get service</h2>
+
+<div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>@Model.Name</h2>
+        </div>
+        <div class="panel-body">
+            <img src="@Model.Image" alt="Image" class="img-thumbnail" width="304" />
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                @Html.ActionLink("Back", "All")
+                <input type="submit" value="Get" class="btn btn-default" />
+            </div>
+        }
+    </div>
+</div>

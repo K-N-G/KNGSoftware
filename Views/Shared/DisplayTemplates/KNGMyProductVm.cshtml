@@ -1,0 +1,19 @@
+﻿@model KNGSoftware.Models.ViewModels.Products.KNGMyProductVm
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>@Model.Name</h2>
+    </div>
+    <div class="panel-body">
+        <img src="@Model.Image" alt="Image" class="img-thumbnail" width="304" />
+    </div>
+    <div class="btn-group-kng">
+        <a href="/MyKNG/details/@Model.Id" class="btn btn-primary">Details</a>
+        <a href="/MyKNG/addproductticket/@Model.Id" class="btn btn-primary">Add ticket</a>
+        <a href="/MyKNG/TicketsProducts/@Model.Id" class="btn btn-primary">Tickets</a>
+    </div>
+</div>
+
+
+
+
+
